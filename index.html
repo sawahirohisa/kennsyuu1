@@ -8,37 +8,279 @@
 </head>
 <body>
 
-    <div class="flex h-[100vh] flex-col bg-white">
+    <div class="flex justify-center  bg-whiteborder overflow-y-scroll">
+        <div class="flex flex-col bg-whiteborder border justify-center">
 
-        <div class="p-2 h-28 flex flex-col">
+            <div class="p-2 h-24 flex flex-col">
 
-            <div class="flex justify-between">
-                <h5>あなたに最適な防災、今ここで探そう</h5>
-                <div class="flex flex-row">
-                    <div class="mr-3">Yahoo! JAPAN</div>
-                    <div class="mr-64">ヘルプ</div>
+                <div class="flex justify-between">
+                    <h5 class="flex text-[#0033CC]">あなたに最適な防災、今ここで探そう</h5>
+                    <div class="flex flex-row">
+                        <div class="mr-5 text-[#0033CC]">Yahoo! JAPAN</div>
+                        <div class="mr-56 text-[#0033CC]">ヘルプ</div>
+                    </div>
+                </div>
+                <div class="flex flex-row">  
+                    <svg class="ml-1 mr-5 mt-5 cursor-pointer" width="206" height="34" viewBox="0 0 206 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M0 0H206V34H0V0Z" fill="url(#pattern0)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_89_32" transform="scale(0.00242718 0.0147059)"/>
+                            </pattern>
+                            <image id="image0_89_32" width="412" height="68" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+                    <div class="flex flex-col justify-start mt-2.5">
+                        <div>IDでもっと便利に<span class="text-[#0033CC] cursor-pointer">新規取得</span></div>
+                        <div class="text-[#0033CC] cursor-pointer">ログイン</div>
+                    </div>      
+                </div>
+            
+            </div>
+
+            <div class="flex flex-row justify-between bg-[#F7F7F7]">
+                <div class="flex mt-3 mb-3 ml-4 cursor-pointer">
+                    <input type="search" class="flex flex-1 border pt-1 pb-1 pr-20" placeholder="キーワードを入力">
+                    <div class="bg-[#FFFFFF] pr-2 pl-2 flex items-center"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.875 12C5.59688 12 3.75 10.1531 3.75 7.875C3.75 5.59688 5.59688 3.75 7.875 3.75C10.1531 3.75 12 5.59688 12 7.875C12 10.1531 10.1531 12 7.875 12ZM15.5303 14.4697L12.3431 11.2826C13.0935 10.3052 13.5002 9.10729 13.5 7.875C13.5 4.7685 10.9815 2.25 7.875 2.25C4.7685 2.25 2.25 4.7685 2.25 7.875C2.25 10.9815 4.7685 13.5 7.875 13.5C9.1072 13.5004 10.305 13.0937 11.2823 12.3431L14.4697 15.5303C14.5389 15.6019 14.6217 15.659 14.7132 15.6983C14.8047 15.7376 14.9031 15.7583 15.0027 15.7592C15.1023 15.7601 15.201 15.7411 15.2932 15.7034C15.3854 15.6657 15.4691 15.61 15.5395 15.5395C15.61 15.4691 15.6657 15.3854 15.7034 15.2932C15.7411 15.201 15.7601 15.1023 15.7592 15.0027C15.7583 14.9031 15.7376 14.8047 15.6983 14.7132C15.659 14.6217 15.6019 14.5389 15.5303 14.4697Z" fill="black"/>
+                        </svg>
+                        </div>
+                </div>
+                <div class="flex flex-row cursor-pointer">
+                    <div class="flex items-center pr-2 pl-2 border">マイページ</div>
+                    <div class="flex items-center pr-3 pl-3 border">購入履歴</div>
+                    <div class="flex items-center pr-3 pl-3 border"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7708 9.99992C12.7708 10.7348 12.4788 11.4396 11.9592 11.9592C11.4396 12.4788 10.7348 12.7708 9.99992 12.7708C9.26505 12.7708 8.56028 12.4788 8.04064 11.9592C7.52101 11.4396 7.22909 10.7348 7.22909 9.99992C7.22909 9.26505 7.52101 8.56028 8.04064 8.04064C8.56028 7.52101 9.26505 7.22909 9.99992 7.22909C10.7348 7.22909 11.4396 7.52101 11.9592 8.04064C12.4788 8.56028 12.7708 9.26505 12.7708 9.99992ZM17.5395 8.52158L16.0174 8.03242C15.9164 7.7253 15.7918 7.42648 15.6445 7.13867L16.3762 5.71367C16.4758 5.5195 16.4308 5.23534 16.277 5.08117L14.9178 3.72242C14.7641 3.56825 14.4799 3.52367 14.2862 3.62284L12.8608 4.35492C12.5729 4.20788 12.2741 4.08334 11.967 3.98242L11.4774 2.45992C11.4108 2.25284 11.1787 2.08325 10.9608 2.08325H9.03825C8.82075 2.08325 8.58825 2.25284 8.52158 2.45992L8.03242 3.98242C7.72284 4.08325 7.42533 4.2095 7.13867 4.35492L5.71367 3.62284C5.5195 3.52367 5.23492 3.56825 5.08117 3.72242L3.722 5.08159C3.56825 5.23534 3.52367 5.51992 3.62284 5.71367L4.35492 7.13909C4.20908 7.42534 4.08284 7.72284 3.982 8.03242L2.45992 8.522C2.25284 8.58867 2.08325 8.82117 2.08325 9.03867V10.9616C2.08325 11.1791 2.25284 11.4116 2.45992 11.4783L3.982 11.9674C4.08284 12.277 4.20908 12.5745 4.35492 12.8608L3.62284 14.2866C3.52367 14.4803 3.56825 14.7649 3.722 14.9187L5.08159 16.2774C5.23534 16.4316 5.51992 16.4762 5.71367 16.3766L7.13867 15.6449C7.42533 15.7903 7.72284 15.9166 8.03242 16.0174L8.522 17.5399C8.58867 17.747 8.82117 17.9166 9.03867 17.9166H10.9612C11.1791 17.9166 11.4112 17.747 11.4778 17.5399L11.967 16.0174C12.2742 15.9163 12.5731 15.7918 12.8612 15.6449L14.2866 16.3766C14.4803 16.4758 14.7645 16.4312 14.9183 16.277L16.2774 14.9183C16.4312 14.7645 16.4762 14.4799 16.3762 14.2862L15.6445 12.8612C15.7903 12.5745 15.9166 12.277 16.0178 11.9674L17.5395 11.4778C17.7466 11.4112 17.9166 11.1787 17.9166 10.9612V9.03825C17.9166 8.82075 17.7466 8.58825 17.5395 8.52158Z" fill="black"/>
+                        </svg>
+                        </div>
                 </div>
             </div>
-            <div class="flex flex-row">  
-                <svg class="ml-1 mr-5 mt-5 cursor-pointer" width="206" height="34" viewBox="0 0 206 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path d="M0 0H206V34H0V0Z" fill="url(#pattern0)"/>
-                    <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                            <use xlink:href="#image0_89_32" transform="scale(0.00242718 0.0147059)"/>
-                        </pattern>
-                        <image id="image0_89_32" width="412" height="68" xlink:href="data:image/png;base64,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"/>
-                    </defs>
-                </svg>
-                <div class="flex flex-col justify-start mt-2.5">
-                    <div>IDでもっと便利に<span class="text-[#0033CC] cursor-pointer">新規取得</span></div>
-                    <div class="text-[#0033CC] cursor-pointer">ログイン</div>
-                </div>      
+
+            <div class="flex flex-row bg-[#44739C]">
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">トップ</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">速報</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">ライブ</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">エキスパート</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">オリジナル</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">みんなの意見</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">ランキング</div>
+                <div class="hover:bg-[#404552] text-[#FFFFFF] pr-6 pl-6 pt-2 pb-2 cursor-pointer">有料</div>
             </div>
-           
+
+            <div class="flex flex-row bg-[#FFFFFF] justify-between">
+                <div class="flex flex-row">
+                    <div class=" ml-3 pr-3 pl-2.5 pt-1.5 pb-1.5 font-bold border-b-4 border-[#476E9A] cursor-pointer">主要</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">国内</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">国際</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">経済</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">エンタメ</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">スポーツ</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">IT</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">科学</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">ライフ</div>
+                    <div class=" ml-2 pr-3 pl-3 pt-1.5 pb-1.5 hover:border-b-4 border-[#476E9A] hover:font-bold cursor-pointer">地域</div>
+                </div>
+                <div class="flex items-center mr-4">トピックス一覧</div>
+            </div>
+
+            <div class="flex flex-1 flex-row border">
+                <div class="flex flex-1 flex-col border">
+                    <div class=" flex flex-row">
+                        <div class="flex flex-col list-none ml-5 mt-2">
+                            <ul class="flex flex-col pr-1 pl-1">
+                                <li class=" mt-1 mb-1 flex flex-row text-[#0033CC] text-lg">原発廃液事故 復興相は報道で知る<span class="flex items-center ml-1"><svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_89_139)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H6C4.4087 0 2.88258 0.632141 1.75736 1.75736C0.632141 2.88258 0 4.4087 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.88258 11.3679 4.4087 12 6 12H21C22.5913 12 24.1174 11.3679 25.2426 10.2426C26.3679 9.11742 27 7.5913 27 6C27 4.4087 26.3679 2.88258 25.2426 1.75736C24.1174 0.632141 22.5913 0 21 0Z" fill="#FFAE00"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5119 9.24006H20.9362L19.7662 4.27056L18.4964 9.24006H16.9484L15.2917 2.75781H16.8134L17.7494 7.80006L19.0372 2.75781H20.6039L21.7379 7.80006L22.7647 2.75781H24.1057L22.5119 9.24006ZM14.8709 9.24006H10.4677V2.75781H14.7719V3.82956H11.8724V5.36031H14.5912V6.41331H11.8724V8.16006H14.8709V9.24006ZM9.57894 9.24006H7.66119L5.14044 3.87456V9.24006H3.89844V2.75781H5.89719L8.33694 7.97106V2.75781H9.57894V9.24006Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_89_139">
+                                    <rect width="27" height="12" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </span>
+                                </li>
+                                <hr>
+                                <li class="mt-1 mb-1 flex flex-row text-[#0033CC] text-lg">陸自性暴力 元隊員に懲役2年求刑
+                                    <span class="flex items-center ml-1"><svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_89_139)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H6C4.4087 0 2.88258 0.632141 1.75736 1.75736C0.632141 2.88258 0 4.4087 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.88258 11.3679 4.4087 12 6 12H21C22.5913 12 24.1174 11.3679 25.2426 10.2426C26.3679 9.11742 27 7.5913 27 6C27 4.4087 26.3679 2.88258 25.2426 1.75736C24.1174 0.632141 22.5913 0 21 0Z" fill="#FFAE00"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5119 9.24006H20.9362L19.7662 4.27056L18.4964 9.24006H16.9484L15.2917 2.75781H16.8134L17.7494 7.80006L19.0372 2.75781H20.6039L21.7379 7.80006L22.7647 2.75781H24.1057L22.5119 9.24006ZM14.8709 9.24006H10.4677V2.75781H14.7719V3.82956H11.8724V5.36031H14.5912V6.41331H11.8724V8.16006H14.8709V9.24006ZM9.57894 9.24006H7.66119L5.14044 3.87456V9.24006H3.89844V2.75781H5.89719L8.33694 7.97106V2.75781H9.57894V9.24006Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_89_139">
+                                        <rect width="27" height="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>
+                                </li>
+                                <hr>
+                                <li class="mt-1 mb-1 flex flex-row text-[#0033CC] text-lg">長期金利一時0.890% 10年ぶり水準<span class="flex items-center ml-1"><svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_89_139)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H6C4.4087 0 2.88258 0.632141 1.75736 1.75736C0.632141 2.88258 0 4.4087 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.88258 11.3679 4.4087 12 6 12H21C22.5913 12 24.1174 11.3679 25.2426 10.2426C26.3679 9.11742 27 7.5913 27 6C27 4.4087 26.3679 2.88258 25.2426 1.75736C24.1174 0.632141 22.5913 0 21 0Z" fill="#FFAE00"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5119 9.24006H20.9362L19.7662 4.27056L18.4964 9.24006H16.9484L15.2917 2.75781H16.8134L17.7494 7.80006L19.0372 2.75781H20.6039L21.7379 7.80006L22.7647 2.75781H24.1057L22.5119 9.24006ZM14.8709 9.24006H10.4677V2.75781H14.7719V3.82956H11.8724V5.36031H14.5912V6.41331H11.8724V8.16006H14.8709V9.24006ZM9.57894 9.24006H7.66119L5.14044 3.87456V9.24006H3.89844V2.75781H5.89719L8.33694 7.97106V2.75781H9.57894V9.24006Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_89_139">
+                                    <rect width="27" height="12" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </span>
+
+                                </li>
+                                <hr>
+                                <li class="mt-1 mb-1 text-[#0033CC] text-lg">トヨタ 上半期生産台数が過去最高</li>
+                                <hr>
+                                <li class="mt-1 mb-1 text-[#0033CC] text-lg">ビッグモーターが9店舗閉鎖へ</li>
+                                <hr>
+                                <li class="mt-1 mb-1 text-[#0033CC] text-lg">韓国移籍へ 仲邑女流棋聖が抱負</li>
+                                <hr>
+                                <li class="mt-1 mb-1 text-[#0033CC] text-lg">中日の観客大入り 球場関係者驚き</li>
+                                <hr>
+                                <li class="mt-1 mb-1 flex flex-row text-[#0033CC] text-lg">芦田愛菜 13年ぶり日曜劇場出演へ
+                                    <span class="flex items-center ml-1"><svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_89_139)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0H6C4.4087 0 2.88258 0.632141 1.75736 1.75736C0.632141 2.88258 0 4.4087 0 6C0 7.5913 0.632141 9.11742 1.75736 10.2426C2.88258 11.3679 4.4087 12 6 12H21C22.5913 12 24.1174 11.3679 25.2426 10.2426C26.3679 9.11742 27 7.5913 27 6C27 4.4087 26.3679 2.88258 25.2426 1.75736C24.1174 0.632141 22.5913 0 21 0Z" fill="#FFAE00"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5119 9.24006H20.9362L19.7662 4.27056L18.4964 9.24006H16.9484L15.2917 2.75781H16.8134L17.7494 7.80006L19.0372 2.75781H20.6039L21.7379 7.80006L22.7647 2.75781H24.1057L22.5119 9.24006ZM14.8709 9.24006H10.4677V2.75781H14.7719V3.82956H11.8724V5.36031H14.5912V6.41331H11.8724V8.16006H14.8709V9.24006ZM9.57894 9.24006H7.66119L5.14044 3.87456V9.24006H3.89844V2.75781H5.89719L8.33694 7.97106V2.75781H9.57894V9.24006Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_89_139">
+                                        <rect width="27" height="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-row mt-2">
+                                <div class="text-[#0033CC] font-bold">もっと見る</div>
+                                <div class="ml-32 text-[#0033CC] ">全カテゴリのトピックス一覧</div>
+                            </div>
+                        </div>
+                        <div class="flex border-l pr-3 pl-3 mt-2">
+                            <div class="flex flex-col items-center mt-2">
+                                <div class="bg-[#EFEFEF] w-[260px] h-[220px]"></div>
+                                <p class="flex items-center mt-2">原発廃液事故 復興相は報道で知る</p>
+                            </div>  
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <div class="border mr-3 ml-4 mt-5 border-[3px]"></div>
+                    </div>
+                    
+                    <div class="flex ml-5 mt-2">
+                        <div class="text-lg">話題のニュース みんなのコメントを見る</div>
+                    </div>
+
+                    <div class="flex flex-row ml-5 pt-7 pb-3 text-[#0033CC]">
+                        <div class="border rounded-2xl mr-2 pr-4 pl-4">すべて</div>
+                        <div class="border rounded-2xl mr-2 pr-4 pl-4">プロ野球</div>
+                    </div>
+
+                    <div>
+                        <div class="border mr-3 ml-4 mt-5 border-[3px]"></div>
+                    </div>
+                </div>
+                
+            
+                <div class="flex border flex-col w-[320px]">
+                    <div class="flex flex-col border items-center">
+
+                        <ol class="ml-3 list-decimal">
+                            <p class="text-[#0033CC] mt-2 mb-1 ml-2">アクセスランキング</p>
+
+                            <div class="border-b-2 mr-2 ml-1"></div>
+
+                            <div class="flex flex-row">
+                                <div class="flex flex-col mb-2 ml-2 ">
+                                    <li class="ml-6 mt-2 mr-2"><span class="line-clamp-3">楽天が来季のコーチ組閣発表 今江監督、渡辺ヘッドが内部昇格で青山浩二1軍投手コーチは新任</span></li>   
+                                    <div class="flex flex-row mr-2">
+                                        <div class="ml-6 whitespace-nowrap text-[#949494]">スポニチアネックス</div>
+                                        <div class="ml-6 text-[#949494]">10/30(月)</div>
+                                    </div>
+                                    <div class="ml-6 text-[#949494]">15:04</div>  
+                                </div>
+                                <img class="mt-3" style="width: 61px; height: 61px" src="https://via.placeholder.com/61x61" />            
+                            </div>
+                            
+                            <div class="border-b-2 mr-3 ml-1"></div>
+
+                            <div class="flex flex-row">
+                                <div class="flex flex-col mb-2 ml-2">
+                                    <li class="ml-6 mt-2 mr-2"><span class="line-clamp-3">「どういうことなんや？」阪神の岡田監督が激怒したオリ森友哉の一塁への打球の判定問題…協議で判定を変更した審判の対応は正しかったのか？</span></li>
+                                    <div class="flex flex-row">
+                                        <div class="ml-6 text-[#949494]">RONSPO</div>
+                                        <div class="ml-5 text-[#949494]">10/30(月)</div>
+                                        <div class="ml-5 text-[#949494]">6:28</div>
+                                    </div>
+                                    
+                                </div>
+                               
+                                <img class="mt-3" style="width: 61px; height: 61px" src="https://via.placeholder.com/61x61" />
+                            </div>
+                           
+                            <div class="border-b-2 mr-3 ml-1"></div>
+
+                            <div class="flex flex-row">
+                                <div class="flex flex-col mb-2 ml-2">
+                                    <li class="ml-6 mt-2 mr-2"><span class="line-clamp-3">NHK朝ドラ「ブキウギ」はアンチほぼ皆無だが…俳優陣の演技以外に“不評”な唯一のところ</span></li>
+                                    <div class="flex flex-row">
+                                        <div class="ml-6 text-[#949494]">日刊ゲンダイDIGITAL</div>
+                                        <div class="ml-1 text-[#949494]">10/30(月)</div>
+                                    </div>
+                                   <div class="ml-6 text-[#949494]">14:00</div>
+                                </div>
+
+                                <img class="mt-3" style="width: 61px; height: 61px" src="https://via.placeholder.com/61x61" />
+                            </div>
+
+                            <div class="border-b-2 mr-3 ml-1"></div>
+                            
+                            <div class="flex flex-row">
+                                <div class="flex flex-col mb-2 ml-2">
+                                    <li class="ml-6 mt-2 mr-2">あやなん“セカンドパートナー”の存在公表 夫婦公認で「家族にも紹介済み」</li>
+                                    <div class="flex flex-row ml-6 text-[#949494] ">
+                                        <div>モデルプレス</div>
+                                        <div class="ml-3">10/30(月)</div>
+                                        <div class="ml-3">10:37</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <img class="mt-3" style="width: 61px; height: 61px" src="https://via.placeholder.com/61x61" />
+                            </div>
+
+                            <div class="border-b-2 mr-3 ml-1"></div>
+                            
+                            <div class="flex flex-row">
+                                <div class="flex flex-col mb-2 ml-2">
+                                    <li class="ml-6 mt-2 mr-2"><span class="line-clamp-3">カンニング竹山、超豪華メンツで日本シリーズ観戦も…前席の観客がまさかの行動 苦言「できればやめてね</span></li>
+                                    <div class="flex flex-row ml-6">
+                                        <div>スポニチアネックス</div>
+                                        <div class="ml-7">10/30(月)</div>
+                                    </div>
+                                    <div class="ml-6">11:06</div>
+                                </div>
+                                <img class="mt-3" style="width: 61px; height: 61px" src="https://via.placeholder.com/61x61" />
+                            </div>
+                            
+                            <div class="border-b-2 mr-3 ml-1"></div>
+
+                        </ol>
+
+                    </div>
+                </div>
+
+            </div>
+
+        
         </div>
 
     </div>
-
     
 </body>
 </html>
